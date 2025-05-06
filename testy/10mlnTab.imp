@@ -1,0 +1,30 @@
+# Poprawny wynik: 4999999, niezależnie od podanej z wejścia liczby
+# Program działa bardzo długo (kilkanaście minut lub nawet dłużej)
+
+PROCEDUREproc(Tt,Ttab,wynik)ISBEGIN
+	FOR i FROM -10000000 TO t[17] DO
+		t[i]:=i;
+	ENDFOR
+	
+	FOR i FROM t[10000000] DOWNTO t[-10000000] DO
+		t[i]:=t[i]%t[2];
+	ENDFOR
+	
+	IF wynik<0 THEN
+		wynik:=wynik%-10000000;
+	ELSE
+		wynik:=wynik%10000000;
+	ENDIF
+	tab[wynik]:=0;
+	
+	FOR j FROM -10000000 TO 10000000 DO
+		tab[wynik]:=tab[wynik]+t[j];
+	ENDFOR
+END
+
+PROGRAMIStab_a[-10000000:10000000],tab_b[-10000000:10000000],indBEGIN
+	READ ind;
+	tab_a[17]:=10000000;
+	proc(tab_a,tab_b,ind);
+	WRITE tab_b[ind];
+END

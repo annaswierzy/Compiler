@@ -1,0 +1,41 @@
+# Poprawne wyniki:
+# dla n>=0, n!
+# dla n<0, jeśli n parzyste, to |n|!, w przeciwnym razie -(|n|!)
+# dla zbyt dużych liczb może być potrzebna maszyna z cln
+
+# Przykładowe wyniki:
+# n=20 -> 2432902008176640000
+# n=-20 -> 2432902008176640000
+# n=19 -> 121645100408832000
+# n=-19 -> -121645100408832000
+
+PROCEDURE silnia(n,w) IS
+	acc
+BEGIN
+	acc:=1;
+	FOR i FROM n DOWNTO 1 DO
+		acc:=acc*i;
+	ENDFOR
+	w:=acc;
+END
+
+PROCEDURE antysilnia(n,w) IS
+	acc
+BEGIN
+	acc:=1;
+	FOR i FROM -1 DOWNTO n DO
+		acc:=acc*i;
+	ENDFOR
+	w:=acc;
+END
+
+PROGRAM IS n, wynik
+BEGIN
+	READ n;
+	IF n>=0 THEN
+		silnia(n,wynik);
+	ELSE
+		antysilnia(n,wynik);
+	ENDIF
+	WRITE wynik;
+END

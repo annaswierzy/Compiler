@@ -1,0 +1,32 @@
+PROCEDURE a(w,x,y) IS BEGIN
+w:=x*y;
+FOR i FROM 0 TO w DO
+w:=w+i;
+ENDFOR END
+
+PROCEDURE b(w,x,y) IS BEGIN
+w:=0;
+IF x<y THEN
+FOR i FROM x TO y DO
+w:=w+i;
+w:=w/2;
+ENDFOR ELSE
+FOR i FROM x DOWNTO y DO
+w:=w+i;
+w:=w/2;
+ENDFOR ENDIF END
+
+PROGRAM IS x,y BEGIN
+READ x;
+IF x>=0 THEN
+y:=x-1;
+FOR i FROM 0 TO y DO
+x:=x+i;
+ENDFOR
+ELSE
+y:=x+1;
+FOR i FROM 0 DOWNTO y DO
+x:=x+i;
+ENDFOR ENDIF
+WRITE x;
+END

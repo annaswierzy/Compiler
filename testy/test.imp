@@ -1,0 +1,33 @@
+# Poprawny wynik wypisu:
+# 3825
+# 3825
+# 0
+# 100
+
+PROCEDURE aaaaaaa(T tab, test) IS
+	minus, prev
+BEGIN
+	FOR i FROM tab[99] DOWNTO tab[98] DO
+		minus:=0-i;
+		prev:=i+1;
+		tab[i]:=tab[prev]+i;
+		prev:=minus-1;
+		tab[minus]:=tab[prev]+minus;
+	ENDFOR
+	tab[0]:=tab[1]+tab[-1];
+	minus:=tab[50];
+	WRITE minus;
+	test:=minus;
+END
+PROGRAM IS
+	tab[-100:100], n
+BEGIN
+	tab[-100]:=-100;
+	tab[100]:=100;
+	tab[99]:=99;
+	tab[98]:=1;
+	aaaaaaa(tab,n);
+	WRITE n;
+	WRITE tab[0];
+	WRITE 100;
+END

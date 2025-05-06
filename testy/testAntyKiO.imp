@@ -1,0 +1,15 @@
+# Poprawny wynik - 0 dla każdego inputu
+
+PROCEDURE _(_,__,___) IS BEGIN
+FOR i FROM 1 TO 10 DO
+__:=__+_;
+_:=__-_;
+ENDFOR
+___:=_*__;
+END
+
+PROGRAM IS x BEGIN
+READ x;
+_(x,x,x);
+WRITE x;
+END

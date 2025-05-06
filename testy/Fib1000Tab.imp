@@ -1,0 +1,26 @@
+# Używać tylko w wersji CLN, bo wynik jest bardzo duży
+# Poprawny wynik:
+# n-ta liczba ciągu Fibonaciego dla F0=0; można przetestować dla 1000, liczba ma 209 cyfr, więc po prostu w Wolframie trzeba wpisać Fib(1000)
+
+PROCEDURE fib_count(n, T t) IS
+	minus_jeden,minus_dwa,j
+BEGIN
+	t[0]:=0;
+	t[1]:=1;	
+	FOR i FROM 2 TO n DO
+		j:=i%1000;
+		minus_jeden:=i-1;
+		minus_jeden:=minus_jeden%1000;
+		minus_dwa:=minus_jeden-1;
+		minus_dwa:=minus_dwa%1000;
+		t[j]:=t[minus_dwa]+t[minus_jeden];
+	ENDFOR
+END
+PROGRAM IS
+	n, tab[0:999]
+BEGIN
+	READ n;
+	fib_count(n,tab);
+	n:=n%1000;
+	WRITE tab[n];
+END

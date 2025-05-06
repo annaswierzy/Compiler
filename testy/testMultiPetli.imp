@@ -1,0 +1,46 @@
+# Przykładowe wyniki:
+# 10, 3 -> -2
+# 20, -9 -> -183
+# 1234567890, -987654321 -> -1219326311126352692 (długo liczy!)
+# a ujemne -> koniec programu
+
+PROCEDURE ___proc(n,m,wynik) IS x BEGIN
+FOR i FROM 0 TO n DO
+FOR j FROM 1 TO m DO
+x:=0-m;
+IF m>=0 THEN
+FOR k FROM m DOWNTO x DO
+wynik:=wynik+2;
+wynik:=wynik/k;
+wynik:=wynik+n;
+wynik:=wynik%x;
+ENDFOR
+ELSE
+FOR k FROM x DOWNTO m DO
+wynik:=wynik-3;
+wynik:=wynik*k;
+wynik:=wynik-n;
+wynik:=wynik/x;
+ENDFOR ENDIF ENDFOR ENDFOR END
+
+PROGRAM IS a,b,c,wynik BEGIN
+READ a;
+READ b;
+c:=0;
+wynik:=c;
+WHILEa>=0DO
+FOR i FROM a DOWNTO -5DO
+IF a<b THEN
+FORjFROMaTObDO
+wynik:=a*b;
+c:=b%a;
+wynik:=wynik-c;ENDFORELSE
+FORjFROMbTOaDO
+wynik:=a*b;
+c:=a/b;
+wynik:=wynik+c;ENDFORENDIFENDFOR
+___proc(a,b,wynik);
+WRITE wynik;
+READ a;
+READ b;
+ENDWHILEEND

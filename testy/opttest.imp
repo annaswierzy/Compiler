@@ -1,0 +1,13 @@
+PROGRAM IS
+	tb[100:700], n, m
+BEGIN
+	READ m;
+	tb[222]:=5555;
+	n:=tb[222]-tb[222];
+	WRITE n;
+	n:=m+m;
+	WRITE n;
+	n:=m/m;
+	WRITE n;
+	WRITE m;
+END

@@ -1,0 +1,11 @@
+# test dzielenia
+
+PROGRAM IS a,b, wynik,mod
+BEGIN
+	READ a;
+	READ b;
+	wynik:=a/b;
+	mod:=a%b;
+	WRITE wynik;
+	WRITE mod;
+END

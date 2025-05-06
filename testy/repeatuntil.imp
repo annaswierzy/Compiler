@@ -1,0 +1,18 @@
+PROGRAM IS a, suma, iloczyn BEGIN
+FOR i FROM 0 DOWNTO -30 DO
+a:=i;
+suma:=0;
+iloczyn:=1;
+REPEAT
+IF a<0 THEN a:=0-a; ENDIF
+suma:=suma+a;
+iloczyn:=iloczyn*a;
+a:=a-1;
+UNTIL a<0;
+a:=0-i;
+WRITE a;
+WRITE suma;
+WRITE iloczyn;
+WRITE 99999999;
+ENDFOR
+END

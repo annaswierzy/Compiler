@@ -1,0 +1,6 @@
+# ma wyrzucić błąd kompilacji
+
+PROGRAM IS x BEGIN
+x:=18446744073709551616;
+WRITE x;
+END

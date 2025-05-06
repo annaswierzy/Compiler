@@ -1,0 +1,17 @@
+# poprawne wyniki dla podanych a,b>0: b!, 2*(b!),..., a*(b!)
+
+PROCEDURE axsilnia(a,b) IS BEGIN
+FOR iterator FROM 1 TO b DO
+a:=a*iterator;
+ENDFOR
+END
+
+PROGRAM IS a,b BEGIN
+READ a;
+READ b;
+IF b>0 THEN
+FOR i FROM 1 TO a DO
+a:=i;
+axsilnia(a,b);
+WRITE a;
+ENDFOR ENDIF END

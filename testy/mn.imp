@@ -1,0 +1,9 @@
+# test mnożenia
+
+PROGRAM IS a,b, wynik
+BEGIN
+	READ a;
+	READ b;
+	wynik:=a*b;
+	WRITE wynik;
+END

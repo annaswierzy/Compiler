@@ -1,0 +1,46 @@
+# Wyniki:
+# dla podanego 0, nieskończona pętla
+# dla podanej liczby!=0, dokładnie tyle ujemnych wartości (porównać trzeba już indywidualnie), później 99999999, a później (-60-n)*(-60+n) dla n=0,1,...,40 (czyli 3600, 3599, 3596, 3591,...,2079,2000)
+
+PROCEDURE x(T t, x) IS mn, wk, w BEGIN
+mn:=-60-x;
+wk:=-60+x;
+w:=t[mn]*t[wk];
+WRITE w;
+END
+
+PROGRAM IS tab[-100:-20],x,y BEGIN
+FOR i FROM -20 DOWNTO -100 DO
+FOR j FROM i TO i DO
+tab[j]:=j;
+ENDFOR
+ENDFOR
+READ x;
+y:=x;
+x:=x%-81;
+x:=x-20;
+IF y>0 THEN
+REPEAT
+WRITE tab[x];
+x:=x-1;
+x:=x%-81;
+x:=x-20;
+y:=y-1;
+UNTIL y=0;
+ELSE
+REPEAT
+WRITE tab[x];
+x:=x-1;
+x:=x%-81;
+x:=x-20;
+y:=y+1;
+UNTIL y=0;
+ENDIF
+x:=x-x;
+y:=0;
+WRITE 99999999;
+WHILE x<=40 DO
+x(tab,x);
+x:=x+1;
+ENDWHILE
+END

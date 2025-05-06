@@ -1,0 +1,31 @@
+# Używać tylko w wersji CLN, bo wynik jest bardzo duży
+# Poprawne wyniki:
+# [wprowadzona liczba 1]
+# [wprowadzona liczba 2]
+# [trzecia wprowadzona liczba]-ta liczba ciągu Fibonaciego dla F0=1; można przetstować dla 1000, liczba ma 209 cyfr, więc po prostu w Wolframie trzeba wpisać Fib(1001) (bo oni liczą od F0=0)
+
+PROCEDURE fib_count(a,wynik) IS
+	b, temp
+BEGIN
+	WRITE a;
+	READ b;
+	WRITE b;
+	a:=1;
+	b:=a;
+	READ temp;
+	
+	FOR i FROM 2 TO temp DO
+		temp:=a;
+		a:=b;
+		b:=a+temp;	#bo teraz a ma wartość dawnego b, a temp dawnego a
+	ENDFOR
+	
+	wynik:=b;
+END
+PROGRAM IS
+	n
+BEGIN
+	READ n;
+	fib_count(n,n);
+	WRITE n;
+END

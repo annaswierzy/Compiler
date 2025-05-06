@@ -1,0 +1,8 @@
+PROGRAM IS k,l BEGIN
+k:=10;
+WHILE k>0 DO
+WRITE k;
+k:=k-1;
+l:=-1;
+ENDWHILE
+END

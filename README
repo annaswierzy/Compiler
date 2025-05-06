@@ -1,0 +1,40 @@
+# Kompilator
+
+## Opis
+Program to kompilator prostego języka imperatywnego do kodu maszyny wirtualnej. Napisany został w C++.
+
+## Opis plików
+- parser.y - parser napisany w c++ za pomocą Flex
+- lexer.l - lexer napisany w c++ za pomocą Bisona
+- makefile - plik który kompiluje kompilator
+- README - opis programu, plików, uruchomienia kompilatora i dane autora
+- maszyna-wirtualna-cln - skompilowana maszyna wirtualna na której powinny działać kody zwrócone przez kompilator
+
+## Wymagania
+Aby skompilować i uruchomić program, wymagane jest posiadanie:
+- Kompilatora C++ (np. g++)
+- `make`
+- `Flex` i `Bison`
+
+## Instalacja i kompilacja
+Aby skompilować program, należy użyć polecenia:
+
+`make`
+
+Po zakończeniu procesu kompilacji, plik wykonywalny `kompilator` zostanie utworzony w katalogu roboczym.
+
+
+## Uruchamianie
+Aby uruchomić program, użyj następującej składni:
+
+`./kompilator <nazwa_pliku_wejsciowego> <nazwa_pliku_wyjsciowego>`
+
+Przykład użycia:
+```sh
+./kompilator input.txt output.txt
+```
+
+## Autor
+Anna Świerzy
+numer indesu: 272355
+

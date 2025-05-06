@@ -1,0 +1,8 @@
+PROGRAM IS a,b BEGIN
+READ a;
+FOR i FROM -20 TO 20 DO
+b:=a/i;
+WRITE i;
+WRITE b;
+ENDFOR
+END

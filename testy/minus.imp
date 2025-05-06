@@ -1,0 +1,4 @@
+PROGRAM IS x BEGIN 
+ x:=-3--4; 
+ WRITE x; 
+ END

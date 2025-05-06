@@ -1,0 +1,70 @@
+PROCEDURE dzielenie(aaa,bbb) IS
+	a,b,aa,bb,temp_a,temp_b,wynik,modulo
+BEGIN
+	aa:=1;
+	bb:=1;
+	b:=bbb;
+	a:=aaa;
+	IF a<0 THEN
+		a:=0-a;
+		aa:=0;
+	ENDIF
+	IF b<0 THEN
+		b:=0-b;
+		bb:=0;
+	ENDIF
+	
+	IF b<=a THEN
+		temp_a:=1;
+		temp_b:=b;
+		WHILE temp_b<a DO
+			temp_a:=temp_a*2;
+			temp_b:=temp_b*2;
+		ENDWHILE
+		IF temp_b>a THEN
+			temp_b:=temp_b/2;
+			temp_a:=temp_a/2;
+		ENDIF
+		
+		a:=a-temp_b;
+		wynik:=temp_a;
+		
+		WHILE temp_a>0 DO
+			WHILE temp_b>a DO
+				temp_a:=temp_a/2;
+				temp_b:=temp_b/2;
+			ENDWHILE
+			wynik:=wynik+temp_a;	# jeśli doszliśmy do końca, to nic się nie zmieni
+			a:=a-temp_b;		# ostatnie zostanie później wyrównane
+		ENDWHILE
+		a:=a+temp_b;			# wyrównanie
+		modulo:=a;
+	ELSE
+		wynik:=0;
+		modulo:=a;
+	ENDIF
+	
+	IF aa!=bb THEN
+		wynik:=0-wynik;
+		IF modulo!=0 THEN
+			wynik:=wynik-1;
+			modulo:=b-modulo;
+		ENDIF
+	ENDIF
+	
+	IF bb=0 THEN
+		IF modulo!=0 THEN
+			modulo:=0-modulo;
+		ENDIF
+	ENDIF
+	
+	WRITE wynik;
+	WRITE modulo;
+END
+
+PROGRAM IS a,b 
+BEGIN
+	READ a;
+	READ b;
+	dzielenie(a,b);
+END

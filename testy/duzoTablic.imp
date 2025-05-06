@@ -1,0 +1,1025 @@
+# Poprawny wynik: 7660391721672338470235002436921505568774578146255433739846837740889725465192280942849220408343114587334386433949633943620933028620475191678391937189637154247594429903185842312484723862292516136659413059031765662697738580634277561959472243766690552554075111112873524038255963016703670215424800149953541975662369257421059873306459899011025441721062532703922953711276659485409390717426972493437611503329103338367017597949747868114357562481068312871860048129987175477782974698226558415108364822821544909315089177320537600
+
+PROCEDURE indeksy_zero(T ta, T tb, T tc, T td, T te, T tf, T tg, T th, T ti, T tj, T tk, T tl, T tm, T tn, T to, T tp, T tq, T tr, T ts, T tt, T tu, T tv, T tw, T tx, T ty, T tz, suma) IS BEGIN
+suma:=0;
+ta[0]:=ta[-10]+ta[10];
+suma:=suma+ta[0];
+tb[0]:=tb[-20]+tb[20];
+suma:=suma+tb[0];
+tc[0]:=tc[-30]+tc[30];
+suma:=suma+tc[0];
+td[0]:=td[-40]+td[40];
+suma:=suma+td[0];
+te[0]:=te[-50]+te[50];
+suma:=suma+te[0];
+tf[0]:=tf[-60]+tf[60];
+suma:=suma+tf[0];
+tg[0]:=tg[-70]+tg[70];
+suma:=suma+tg[0];
+th[0]:=th[-80]+th[80];
+suma:=suma+th[0];
+ti[0]:=ti[-90]+ti[90];
+suma:=suma+ti[0];
+tj[0]:=tj[-100]+tj[100];
+suma:=suma+tj[0];
+tk[0]:=tk[-110]+tk[110];
+suma:=suma+tk[0];
+tl[0]:=tl[-120]+tl[120];
+suma:=suma+tl[0];
+tm[0]:=tm[-130]+tm[130];
+suma:=suma+tm[0];
+tn[0]:=tn[-140]+tn[140];
+suma:=suma+tn[0];
+to[0]:=to[-150]+to[150];
+suma:=suma+to[0];
+tp[0]:=tp[-160]+tp[160];
+suma:=suma+tp[0];
+tq[0]:=tq[-170]+tq[170];
+suma:=suma+tq[0];
+tr[0]:=tr[-180]+tr[180];
+suma:=suma+tr[0];
+ts[0]:=ts[-190]+ts[190];
+suma:=suma+ts[0];
+tt[0]:=tt[-200]+tt[200];
+suma:=suma+tt[0];
+tu[0]:=tu[-210]+tu[210];
+suma:=suma+tu[0];
+tv[0]:=tv[-220]+tv[220];
+suma:=suma+tv[0];
+tw[0]:=tw[-230]+tw[230];
+suma:=suma+tw[0];
+tx[0]:=tx[-240]+tx[240];
+suma:=suma+tx[0];
+ty[0]:=ty[-250]+ty[250];
+suma:=suma+ty[0];
+tz[0]:=tz[-260]+tz[260];
+suma:=suma+tz[0];
+END
+
+PROGRAM IS tab_a[-10:10], tab_b[-20:20], tab_c[-30:30], tab_d[-40:40], tab_e[-50:50], tab_f[-60:60], tab_g[-70:70], tab_h[-80:80], tab_i[-90:90], tab_j[-100:100], tab_k[-110:110], tab_l[-120:120], tab_m[-130:130], tab_n[-140:140], tab_o[-150:150], tab_p[-160:160], tab_q[-170:170], tab_r[-180:180], tab_s[-190:190], tab_t[-200:200], tab_u[-210:210], tab_v[-220:220], tab_w[-230:230], tab_x[-240:240], tab_y[-250:250], tab_z[-260:260], a,b,c BEGIN
+
+tab_a[1]:=1;
+tab_a[-1]:=1;
+tab_b[1]:=1;
+tab_b[-1]:=1;
+tab_c[1]:=1;
+tab_c[-1]:=1;
+tab_d[1]:=1;
+tab_d[-1]:=1;
+tab_e[1]:=1;
+tab_e[-1]:=1;
+tab_f[1]:=1;
+tab_f[-1]:=1;
+tab_g[1]:=1;
+tab_g[-1]:=1;
+tab_h[1]:=1;
+tab_h[-1]:=1;
+tab_i[1]:=1;
+tab_i[-1]:=1;
+tab_j[1]:=1;
+tab_j[-1]:=1;
+tab_k[1]:=1;
+tab_k[-1]:=1;
+tab_l[1]:=1;
+tab_l[-1]:=1;
+tab_m[1]:=1;
+tab_m[-1]:=1;
+tab_n[1]:=1;
+tab_n[-1]:=1;
+tab_o[1]:=1;
+tab_o[-1]:=1;
+tab_p[1]:=1;
+tab_p[-1]:=1;
+tab_q[1]:=1;
+tab_q[-1]:=1;
+tab_r[1]:=1;
+tab_r[-1]:=1;
+tab_s[1]:=1;
+tab_s[-1]:=1;
+tab_t[1]:=1;
+tab_t[-1]:=1;
+tab_u[1]:=1;
+tab_u[-1]:=1;
+tab_v[1]:=1;
+tab_v[-1]:=1;
+tab_w[1]:=1;
+tab_w[-1]:=1;
+tab_x[1]:=1;
+tab_x[-1]:=1;
+tab_y[1]:=1;
+tab_y[-1]:=1;
+tab_z[1]:=1;
+tab_z[-1]:=1;
+
+FOR i FROM -2 DOWNTO -10 DO
+	b:=i+1;
+	a:=0-i;
+	c:=a-1;
+	
+	tab_a[i]:=tab_a[b]*a;
+	tab_a[a]:=tab_a[c]*a;
+	tab_b[i]:=tab_b[b]*a;
+	tab_b[a]:=tab_b[c]*a;
+	tab_c[i]:=tab_c[b]*a;
+	tab_c[a]:=tab_c[c]*a;
+	tab_d[i]:=tab_d[b]*a;
+	tab_d[a]:=tab_d[c]*a;
+	tab_e[i]:=tab_e[b]*a;
+	tab_e[a]:=tab_e[c]*a;
+	tab_f[i]:=tab_f[b]*a;
+	tab_f[a]:=tab_f[c]*a;
+	tab_g[i]:=tab_g[b]*a;
+	tab_g[a]:=tab_g[c]*a;
+	tab_h[i]:=tab_h[b]*a;
+	tab_h[a]:=tab_h[c]*a;
+	tab_i[i]:=tab_i[b]*a;
+	tab_i[a]:=tab_i[c]*a;
+	tab_j[i]:=tab_j[b]*a;
+	tab_j[a]:=tab_j[c]*a;
+	tab_k[i]:=tab_k[b]*a;
+	tab_k[a]:=tab_k[c]*a;
+	tab_l[i]:=tab_l[b]*a;
+	tab_l[a]:=tab_l[c]*a;
+	tab_m[i]:=tab_m[b]*a;
+	tab_m[a]:=tab_m[c]*a;
+	tab_n[i]:=tab_n[b]*a;
+	tab_n[a]:=tab_n[c]*a;
+	tab_o[i]:=tab_o[b]*a;
+	tab_o[a]:=tab_o[c]*a;
+	tab_p[i]:=tab_p[b]*a;
+	tab_p[a]:=tab_p[c]*a;
+	tab_q[i]:=tab_q[b]*a;
+	tab_q[a]:=tab_q[c]*a;
+	tab_r[i]:=tab_r[b]*a;
+	tab_r[a]:=tab_r[c]*a;
+	tab_s[i]:=tab_s[b]*a;
+	tab_s[a]:=tab_s[c]*a;
+	tab_t[i]:=tab_t[b]*a;
+	tab_t[a]:=tab_t[c]*a;
+	tab_u[i]:=tab_u[b]*a;
+	tab_u[a]:=tab_u[c]*a;
+	tab_v[i]:=tab_v[b]*a;
+	tab_v[a]:=tab_v[c]*a;
+	tab_w[i]:=tab_w[b]*a;
+	tab_w[a]:=tab_w[c]*a;
+	tab_x[i]:=tab_x[b]*a;
+	tab_x[a]:=tab_x[c]*a;
+	tab_y[i]:=tab_y[b]*a;
+	tab_y[a]:=tab_y[c]*a;
+	tab_z[i]:=tab_z[b]*a;
+	tab_z[a]:=tab_z[c]*a;
+ENDFOR
+
+FOR i FROM -11 DOWNTO -20 DO
+	b:=i+1;
+	a:=0-i;
+	c:=a-1;
+	
+	tab_b[i]:=tab_b[b]*a;
+	tab_b[a]:=tab_b[c]*a;
+	tab_c[i]:=tab_c[b]*a;
+	tab_c[a]:=tab_c[c]*a;
+	tab_d[i]:=tab_d[b]*a;
+	tab_d[a]:=tab_d[c]*a;
+	tab_e[i]:=tab_e[b]*a;
+	tab_e[a]:=tab_e[c]*a;
+	tab_f[i]:=tab_f[b]*a;
+	tab_f[a]:=tab_f[c]*a;
+	tab_g[i]:=tab_g[b]*a;
+	tab_g[a]:=tab_g[c]*a;
+	tab_h[i]:=tab_h[b]*a;
+	tab_h[a]:=tab_h[c]*a;
+	tab_i[i]:=tab_i[b]*a;
+	tab_i[a]:=tab_i[c]*a;
+	tab_j[i]:=tab_j[b]*a;
+	tab_j[a]:=tab_j[c]*a;
+	tab_k[i]:=tab_k[b]*a;
+	tab_k[a]:=tab_k[c]*a;
+	tab_l[i]:=tab_l[b]*a;
+	tab_l[a]:=tab_l[c]*a;
+	tab_m[i]:=tab_m[b]*a;
+	tab_m[a]:=tab_m[c]*a;
+	tab_n[i]:=tab_n[b]*a;
+	tab_n[a]:=tab_n[c]*a;
+	tab_o[i]:=tab_o[b]*a;
+	tab_o[a]:=tab_o[c]*a;
+	tab_p[i]:=tab_p[b]*a;
+	tab_p[a]:=tab_p[c]*a;
+	tab_q[i]:=tab_q[b]*a;
+	tab_q[a]:=tab_q[c]*a;
+	tab_r[i]:=tab_r[b]*a;
+	tab_r[a]:=tab_r[c]*a;
+	tab_s[i]:=tab_s[b]*a;
+	tab_s[a]:=tab_s[c]*a;
+	tab_t[i]:=tab_t[b]*a;
+	tab_t[a]:=tab_t[c]*a;
+	tab_u[i]:=tab_u[b]*a;
+	tab_u[a]:=tab_u[c]*a;
+	tab_v[i]:=tab_v[b]*a;
+	tab_v[a]:=tab_v[c]*a;
+	tab_w[i]:=tab_w[b]*a;
+	tab_w[a]:=tab_w[c]*a;
+	tab_x[i]:=tab_x[b]*a;
+	tab_x[a]:=tab_x[c]*a;
+	tab_y[i]:=tab_y[b]*a;
+	tab_y[a]:=tab_y[c]*a;
+	tab_z[i]:=tab_z[b]*a;
+	tab_z[a]:=tab_z[c]*a;
+ENDFOR
+
+FOR i FROM -21 DOWNTO -30 DO
+	b:=i+1;
+	a:=0-i;
+	c:=a-1;
+
+	tab_c[i]:=tab_c[b]*a;
+	tab_c[a]:=tab_c[c]*a;
+	tab_d[i]:=tab_d[b]*a;
+	tab_d[a]:=tab_d[c]*a;
+	tab_e[i]:=tab_e[b]*a;
+	tab_e[a]:=tab_e[c]*a;
+	tab_f[i]:=tab_f[b]*a;
+	tab_f[a]:=tab_f[c]*a;
+	tab_g[i]:=tab_g[b]*a;
+	tab_g[a]:=tab_g[c]*a;
+	tab_h[i]:=tab_h[b]*a;
+	tab_h[a]:=tab_h[c]*a;
+	tab_i[i]:=tab_i[b]*a;
+	tab_i[a]:=tab_i[c]*a;
+	tab_j[i]:=tab_j[b]*a;
+	tab_j[a]:=tab_j[c]*a;
+	tab_k[i]:=tab_k[b]*a;
+	tab_k[a]:=tab_k[c]*a;
+	tab_l[i]:=tab_l[b]*a;
+	tab_l[a]:=tab_l[c]*a;
+	tab_m[i]:=tab_m[b]*a;
+	tab_m[a]:=tab_m[c]*a;
+	tab_n[i]:=tab_n[b]*a;
+	tab_n[a]:=tab_n[c]*a;
+	tab_o[i]:=tab_o[b]*a;
+	tab_o[a]:=tab_o[c]*a;
+	tab_p[i]:=tab_p[b]*a;
+	tab_p[a]:=tab_p[c]*a;
+	tab_q[i]:=tab_q[b]*a;
+	tab_q[a]:=tab_q[c]*a;
+	tab_r[i]:=tab_r[b]*a;
+	tab_r[a]:=tab_r[c]*a;
+	tab_s[i]:=tab_s[b]*a;
+	tab_s[a]:=tab_s[c]*a;
+	tab_t[i]:=tab_t[b]*a;
+	tab_t[a]:=tab_t[c]*a;
+	tab_u[i]:=tab_u[b]*a;
+	tab_u[a]:=tab_u[c]*a;
+	tab_v[i]:=tab_v[b]*a;
+	tab_v[a]:=tab_v[c]*a;
+	tab_w[i]:=tab_w[b]*a;
+	tab_w[a]:=tab_w[c]*a;
+	tab_x[i]:=tab_x[b]*a;
+	tab_x[a]:=tab_x[c]*a;
+	tab_y[i]:=tab_y[b]*a;
+	tab_y[a]:=tab_y[c]*a;
+	tab_z[i]:=tab_z[b]*a;
+	tab_z[a]:=tab_z[c]*a;
+ENDFOR
+
+
+FOR i FROM -31 DOWNTO -40 DO
+	b:=i+1;
+	a:=0-i;
+	c:=a-1;
+
+	tab_d[i]:=tab_d[b]*a;
+	tab_d[a]:=tab_d[c]*a;
+	tab_e[i]:=tab_e[b]*a;
+	tab_e[a]:=tab_e[c]*a;
+	tab_f[i]:=tab_f[b]*a;
+	tab_f[a]:=tab_f[c]*a;
+	tab_g[i]:=tab_g[b]*a;
+	tab_g[a]:=tab_g[c]*a;
+	tab_h[i]:=tab_h[b]*a;
+	tab_h[a]:=tab_h[c]*a;
+	tab_i[i]:=tab_i[b]*a;
+	tab_i[a]:=tab_i[c]*a;
+	tab_j[i]:=tab_j[b]*a;
+	tab_j[a]:=tab_j[c]*a;
+	tab_k[i]:=tab_k[b]*a;
+	tab_k[a]:=tab_k[c]*a;
+	tab_l[i]:=tab_l[b]*a;
+	tab_l[a]:=tab_l[c]*a;
+	tab_m[i]:=tab_m[b]*a;
+	tab_m[a]:=tab_m[c]*a;
+	tab_n[i]:=tab_n[b]*a;
+	tab_n[a]:=tab_n[c]*a;
+	tab_o[i]:=tab_o[b]*a;
+	tab_o[a]:=tab_o[c]*a;
+	tab_p[i]:=tab_p[b]*a;
+	tab_p[a]:=tab_p[c]*a;
+	tab_q[i]:=tab_q[b]*a;
+	tab_q[a]:=tab_q[c]*a;
+	tab_r[i]:=tab_r[b]*a;
+	tab_r[a]:=tab_r[c]*a;
+	tab_s[i]:=tab_s[b]*a;
+	tab_s[a]:=tab_s[c]*a;
+	tab_t[i]:=tab_t[b]*a;
+	tab_t[a]:=tab_t[c]*a;
+	tab_u[i]:=tab_u[b]*a;
+	tab_u[a]:=tab_u[c]*a;
+	tab_v[i]:=tab_v[b]*a;
+	tab_v[a]:=tab_v[c]*a;
+	tab_w[i]:=tab_w[b]*a;
+	tab_w[a]:=tab_w[c]*a;
+	tab_x[i]:=tab_x[b]*a;
+	tab_x[a]:=tab_x[c]*a;
+	tab_y[i]:=tab_y[b]*a;
+	tab_y[a]:=tab_y[c]*a;
+	tab_z[i]:=tab_z[b]*a;
+	tab_z[a]:=tab_z[c]*a;
+ENDFOR
+
+
+FOR i FROM -41 DOWNTO -50 DO
+	b:=i+1;
+	a:=0-i;
+	c:=a-1;
+
+	tab_e[i]:=tab_e[b]*a;
+	tab_e[a]:=tab_e[c]*a;
+	tab_f[i]:=tab_f[b]*a;
+	tab_f[a]:=tab_f[c]*a;
+	tab_g[i]:=tab_g[b]*a;
+	tab_g[a]:=tab_g[c]*a;
+	tab_h[i]:=tab_h[b]*a;
+	tab_h[a]:=tab_h[c]*a;
+	tab_i[i]:=tab_i[b]*a;
+	tab_i[a]:=tab_i[c]*a;
+	tab_j[i]:=tab_j[b]*a;
+	tab_j[a]:=tab_j[c]*a;
+	tab_k[i]:=tab_k[b]*a;
+	tab_k[a]:=tab_k[c]*a;
+	tab_l[i]:=tab_l[b]*a;
+	tab_l[a]:=tab_l[c]*a;
+	tab_m[i]:=tab_m[b]*a;
+	tab_m[a]:=tab_m[c]*a;
+	tab_n[i]:=tab_n[b]*a;
+	tab_n[a]:=tab_n[c]*a;
+	tab_o[i]:=tab_o[b]*a;
+	tab_o[a]:=tab_o[c]*a;
+	tab_p[i]:=tab_p[b]*a;
+	tab_p[a]:=tab_p[c]*a;
+	tab_q[i]:=tab_q[b]*a;
+	tab_q[a]:=tab_q[c]*a;
+	tab_r[i]:=tab_r[b]*a;
+	tab_r[a]:=tab_r[c]*a;
+	tab_s[i]:=tab_s[b]*a;
+	tab_s[a]:=tab_s[c]*a;
+	tab_t[i]:=tab_t[b]*a;
+	tab_t[a]:=tab_t[c]*a;
+	tab_u[i]:=tab_u[b]*a;
+	tab_u[a]:=tab_u[c]*a;
+	tab_v[i]:=tab_v[b]*a;
+	tab_v[a]:=tab_v[c]*a;
+	tab_w[i]:=tab_w[b]*a;
+	tab_w[a]:=tab_w[c]*a;
+	tab_x[i]:=tab_x[b]*a;
+	tab_x[a]:=tab_x[c]*a;
+	tab_y[i]:=tab_y[b]*a;
+	tab_y[a]:=tab_y[c]*a;
+	tab_z[i]:=tab_z[b]*a;
+	tab_z[a]:=tab_z[c]*a;
+ENDFOR
+
+
+FOR i FROM -51 DOWNTO -60 DO
+	b:=i+1;
+	a:=0-i;
+	c:=a-1;
+
+	tab_f[i]:=tab_f[b]*a;
+	tab_f[a]:=tab_f[c]*a;
+	tab_g[i]:=tab_g[b]*a;
+	tab_g[a]:=tab_g[c]*a;
+	tab_h[i]:=tab_h[b]*a;
+	tab_h[a]:=tab_h[c]*a;
+	tab_i[i]:=tab_i[b]*a;
+	tab_i[a]:=tab_i[c]*a;
+	tab_j[i]:=tab_j[b]*a;
+	tab_j[a]:=tab_j[c]*a;
+	tab_k[i]:=tab_k[b]*a;
+	tab_k[a]:=tab_k[c]*a;
+	tab_l[i]:=tab_l[b]*a;
+	tab_l[a]:=tab_l[c]*a;
+	tab_m[i]:=tab_m[b]*a;
+	tab_m[a]:=tab_m[c]*a;
+	tab_n[i]:=tab_n[b]*a;
+	tab_n[a]:=tab_n[c]*a;
+	tab_o[i]:=tab_o[b]*a;
+	tab_o[a]:=tab_o[c]*a;
+	tab_p[i]:=tab_p[b]*a;
+	tab_p[a]:=tab_p[c]*a;
+	tab_q[i]:=tab_q[b]*a;
+	tab_q[a]:=tab_q[c]*a;
+	tab_r[i]:=tab_r[b]*a;
+	tab_r[a]:=tab_r[c]*a;
+	tab_s[i]:=tab_s[b]*a;
+	tab_s[a]:=tab_s[c]*a;
+	tab_t[i]:=tab_t[b]*a;
+	tab_t[a]:=tab_t[c]*a;
+	tab_u[i]:=tab_u[b]*a;
+	tab_u[a]:=tab_u[c]*a;
+	tab_v[i]:=tab_v[b]*a;
+	tab_v[a]:=tab_v[c]*a;
+	tab_w[i]:=tab_w[b]*a;
+	tab_w[a]:=tab_w[c]*a;
+	tab_x[i]:=tab_x[b]*a;
+	tab_x[a]:=tab_x[c]*a;
+	tab_y[i]:=tab_y[b]*a;
+	tab_y[a]:=tab_y[c]*a;
+	tab_z[i]:=tab_z[b]*a;
+	tab_z[a]:=tab_z[c]*a;
+ENDFOR
+
+
+FOR i FROM -61 DOWNTO -70 DO
+	b:=i+1;
+	a:=0-i;
+	c:=a-1;
+
+	tab_g[i]:=tab_g[b]*a;
+	tab_g[a]:=tab_g[c]*a;
+	tab_h[i]:=tab_h[b]*a;
+	tab_h[a]:=tab_h[c]*a;
+	tab_i[i]:=tab_i[b]*a;
+	tab_i[a]:=tab_i[c]*a;
+	tab_j[i]:=tab_j[b]*a;
+	tab_j[a]:=tab_j[c]*a;
+	tab_k[i]:=tab_k[b]*a;
+	tab_k[a]:=tab_k[c]*a;
+	tab_l[i]:=tab_l[b]*a;
+	tab_l[a]:=tab_l[c]*a;
+	tab_m[i]:=tab_m[b]*a;
+	tab_m[a]:=tab_m[c]*a;
+	tab_n[i]:=tab_n[b]*a;
+	tab_n[a]:=tab_n[c]*a;
+	tab_o[i]:=tab_o[b]*a;
+	tab_o[a]:=tab_o[c]*a;
+	tab_p[i]:=tab_p[b]*a;
+	tab_p[a]:=tab_p[c]*a;
+	tab_q[i]:=tab_q[b]*a;
+	tab_q[a]:=tab_q[c]*a;
+	tab_r[i]:=tab_r[b]*a;
+	tab_r[a]:=tab_r[c]*a;
+	tab_s[i]:=tab_s[b]*a;
+	tab_s[a]:=tab_s[c]*a;
+	tab_t[i]:=tab_t[b]*a;
+	tab_t[a]:=tab_t[c]*a;
+	tab_u[i]:=tab_u[b]*a;
+	tab_u[a]:=tab_u[c]*a;
+	tab_v[i]:=tab_v[b]*a;
+	tab_v[a]:=tab_v[c]*a;
+	tab_w[i]:=tab_w[b]*a;
+	tab_w[a]:=tab_w[c]*a;
+	tab_x[i]:=tab_x[b]*a;
+	tab_x[a]:=tab_x[c]*a;
+	tab_y[i]:=tab_y[b]*a;
+	tab_y[a]:=tab_y[c]*a;
+	tab_z[i]:=tab_z[b]*a;
+	tab_z[a]:=tab_z[c]*a;
+ENDFOR
+
+
+FOR i FROM -71 DOWNTO -80 DO
+	b:=i+1;
+	a:=0-i;
+	c:=a-1;
+
+	tab_h[i]:=tab_h[b]*a;
+	tab_h[a]:=tab_h[c]*a;
+	tab_i[i]:=tab_i[b]*a;
+	tab_i[a]:=tab_i[c]*a;
+	tab_j[i]:=tab_j[b]*a;
+	tab_j[a]:=tab_j[c]*a;
+	tab_k[i]:=tab_k[b]*a;
+	tab_k[a]:=tab_k[c]*a;
+	tab_l[i]:=tab_l[b]*a;
+	tab_l[a]:=tab_l[c]*a;
+	tab_m[i]:=tab_m[b]*a;
+	tab_m[a]:=tab_m[c]*a;
+	tab_n[i]:=tab_n[b]*a;
+	tab_n[a]:=tab_n[c]*a;
+	tab_o[i]:=tab_o[b]*a;
+	tab_o[a]:=tab_o[c]*a;
+	tab_p[i]:=tab_p[b]*a;
+	tab_p[a]:=tab_p[c]*a;
+	tab_q[i]:=tab_q[b]*a;
+	tab_q[a]:=tab_q[c]*a;
+	tab_r[i]:=tab_r[b]*a;
+	tab_r[a]:=tab_r[c]*a;
+	tab_s[i]:=tab_s[b]*a;
+	tab_s[a]:=tab_s[c]*a;
+	tab_t[i]:=tab_t[b]*a;
+	tab_t[a]:=tab_t[c]*a;
+	tab_u[i]:=tab_u[b]*a;
+	tab_u[a]:=tab_u[c]*a;
+	tab_v[i]:=tab_v[b]*a;
+	tab_v[a]:=tab_v[c]*a;
+	tab_w[i]:=tab_w[b]*a;
+	tab_w[a]:=tab_w[c]*a;
+	tab_x[i]:=tab_x[b]*a;
+	tab_x[a]:=tab_x[c]*a;
+	tab_y[i]:=tab_y[b]*a;
+	tab_y[a]:=tab_y[c]*a;
+	tab_z[i]:=tab_z[b]*a;
+	tab_z[a]:=tab_z[c]*a;
+ENDFOR
+
+
+FOR i FROM -81 DOWNTO -90 DO
+	b:=i+1;
+	a:=0-i;
+	c:=a-1;
+
+	tab_i[i]:=tab_i[b]*a;
+	tab_i[a]:=tab_i[c]*a;
+	tab_j[i]:=tab_j[b]*a;
+	tab_j[a]:=tab_j[c]*a;
+	tab_k[i]:=tab_k[b]*a;
+	tab_k[a]:=tab_k[c]*a;
+	tab_l[i]:=tab_l[b]*a;
+	tab_l[a]:=tab_l[c]*a;
+	tab_m[i]:=tab_m[b]*a;
+	tab_m[a]:=tab_m[c]*a;
+	tab_n[i]:=tab_n[b]*a;
+	tab_n[a]:=tab_n[c]*a;
+	tab_o[i]:=tab_o[b]*a;
+	tab_o[a]:=tab_o[c]*a;
+	tab_p[i]:=tab_p[b]*a;
+	tab_p[a]:=tab_p[c]*a;
+	tab_q[i]:=tab_q[b]*a;
+	tab_q[a]:=tab_q[c]*a;
+	tab_r[i]:=tab_r[b]*a;
+	tab_r[a]:=tab_r[c]*a;
+	tab_s[i]:=tab_s[b]*a;
+	tab_s[a]:=tab_s[c]*a;
+	tab_t[i]:=tab_t[b]*a;
+	tab_t[a]:=tab_t[c]*a;
+	tab_u[i]:=tab_u[b]*a;
+	tab_u[a]:=tab_u[c]*a;
+	tab_v[i]:=tab_v[b]*a;
+	tab_v[a]:=tab_v[c]*a;
+	tab_w[i]:=tab_w[b]*a;
+	tab_w[a]:=tab_w[c]*a;
+	tab_x[i]:=tab_x[b]*a;
+	tab_x[a]:=tab_x[c]*a;
+	tab_y[i]:=tab_y[b]*a;
+	tab_y[a]:=tab_y[c]*a;
+	tab_z[i]:=tab_z[b]*a;
+	tab_z[a]:=tab_z[c]*a;
+ENDFOR
+
+
+FOR i FROM -91 DOWNTO -100 DO
+	b:=i+1;
+	a:=0-i;
+	c:=a-1;
+
+	tab_j[i]:=tab_j[b]*a;
+	tab_j[a]:=tab_j[c]*a;
+	tab_k[i]:=tab_k[b]*a;
+	tab_k[a]:=tab_k[c]*a;
+	tab_l[i]:=tab_l[b]*a;
+	tab_l[a]:=tab_l[c]*a;
+	tab_m[i]:=tab_m[b]*a;
+	tab_m[a]:=tab_m[c]*a;
+	tab_n[i]:=tab_n[b]*a;
+	tab_n[a]:=tab_n[c]*a;
+	tab_o[i]:=tab_o[b]*a;
+	tab_o[a]:=tab_o[c]*a;
+	tab_p[i]:=tab_p[b]*a;
+	tab_p[a]:=tab_p[c]*a;
+	tab_q[i]:=tab_q[b]*a;
+	tab_q[a]:=tab_q[c]*a;
+	tab_r[i]:=tab_r[b]*a;
+	tab_r[a]:=tab_r[c]*a;
+	tab_s[i]:=tab_s[b]*a;
+	tab_s[a]:=tab_s[c]*a;
+	tab_t[i]:=tab_t[b]*a;
+	tab_t[a]:=tab_t[c]*a;
+	tab_u[i]:=tab_u[b]*a;
+	tab_u[a]:=tab_u[c]*a;
+	tab_v[i]:=tab_v[b]*a;
+	tab_v[a]:=tab_v[c]*a;
+	tab_w[i]:=tab_w[b]*a;
+	tab_w[a]:=tab_w[c]*a;
+	tab_x[i]:=tab_x[b]*a;
+	tab_x[a]:=tab_x[c]*a;
+	tab_y[i]:=tab_y[b]*a;
+	tab_y[a]:=tab_y[c]*a;
+	tab_z[i]:=tab_z[b]*a;
+	tab_z[a]:=tab_z[c]*a;
+ENDFOR
+
+
+FOR i FROM -101 DOWNTO -110 DO
+	b:=i+1;
+	a:=0-i;
+	c:=a-1;
+
+	tab_k[i]:=tab_k[b]*a;
+	tab_k[a]:=tab_k[c]*a;
+	tab_l[i]:=tab_l[b]*a;
+	tab_l[a]:=tab_l[c]*a;
+	tab_m[i]:=tab_m[b]*a;
+	tab_m[a]:=tab_m[c]*a;
+	tab_n[i]:=tab_n[b]*a;
+	tab_n[a]:=tab_n[c]*a;
+	tab_o[i]:=tab_o[b]*a;
+	tab_o[a]:=tab_o[c]*a;
+	tab_p[i]:=tab_p[b]*a;
+	tab_p[a]:=tab_p[c]*a;
+	tab_q[i]:=tab_q[b]*a;
+	tab_q[a]:=tab_q[c]*a;
+	tab_r[i]:=tab_r[b]*a;
+	tab_r[a]:=tab_r[c]*a;
+	tab_s[i]:=tab_s[b]*a;
+	tab_s[a]:=tab_s[c]*a;
+	tab_t[i]:=tab_t[b]*a;
+	tab_t[a]:=tab_t[c]*a;
+	tab_u[i]:=tab_u[b]*a;
+	tab_u[a]:=tab_u[c]*a;
+	tab_v[i]:=tab_v[b]*a;
+	tab_v[a]:=tab_v[c]*a;
+	tab_w[i]:=tab_w[b]*a;
+	tab_w[a]:=tab_w[c]*a;
+	tab_x[i]:=tab_x[b]*a;
+	tab_x[a]:=tab_x[c]*a;
+	tab_y[i]:=tab_y[b]*a;
+	tab_y[a]:=tab_y[c]*a;
+	tab_z[i]:=tab_z[b]*a;
+	tab_z[a]:=tab_z[c]*a;
+ENDFOR
+
+
+FOR i FROM -111 DOWNTO -120 DO
+	b:=i+1;
+	a:=0-i;
+	c:=a-1;
+
+	tab_l[i]:=tab_l[b]*a;
+	tab_l[a]:=tab_l[c]*a;
+	tab_m[i]:=tab_m[b]*a;
+	tab_m[a]:=tab_m[c]*a;
+	tab_n[i]:=tab_n[b]*a;
+	tab_n[a]:=tab_n[c]*a;
+	tab_o[i]:=tab_o[b]*a;
+	tab_o[a]:=tab_o[c]*a;
+	tab_p[i]:=tab_p[b]*a;
+	tab_p[a]:=tab_p[c]*a;
+	tab_q[i]:=tab_q[b]*a;
+	tab_q[a]:=tab_q[c]*a;
+	tab_r[i]:=tab_r[b]*a;
+	tab_r[a]:=tab_r[c]*a;
+	tab_s[i]:=tab_s[b]*a;
+	tab_s[a]:=tab_s[c]*a;
+	tab_t[i]:=tab_t[b]*a;
+	tab_t[a]:=tab_t[c]*a;
+	tab_u[i]:=tab_u[b]*a;
+	tab_u[a]:=tab_u[c]*a;
+	tab_v[i]:=tab_v[b]*a;
+	tab_v[a]:=tab_v[c]*a;
+	tab_w[i]:=tab_w[b]*a;
+	tab_w[a]:=tab_w[c]*a;
+	tab_x[i]:=tab_x[b]*a;
+	tab_x[a]:=tab_x[c]*a;
+	tab_y[i]:=tab_y[b]*a;
+	tab_y[a]:=tab_y[c]*a;
+	tab_z[i]:=tab_z[b]*a;
+	tab_z[a]:=tab_z[c]*a;
+ENDFOR
+
+
+FOR i FROM -121 DOWNTO -130 DO
+	b:=i+1;
+	a:=0-i;
+	c:=a-1;
+
+	tab_m[i]:=tab_m[b]*a;
+	tab_m[a]:=tab_m[c]*a;
+	tab_n[i]:=tab_n[b]*a;
+	tab_n[a]:=tab_n[c]*a;
+	tab_o[i]:=tab_o[b]*a;
+	tab_o[a]:=tab_o[c]*a;
+	tab_p[i]:=tab_p[b]*a;
+	tab_p[a]:=tab_p[c]*a;
+	tab_q[i]:=tab_q[b]*a;
+	tab_q[a]:=tab_q[c]*a;
+	tab_r[i]:=tab_r[b]*a;
+	tab_r[a]:=tab_r[c]*a;
+	tab_s[i]:=tab_s[b]*a;
+	tab_s[a]:=tab_s[c]*a;
+	tab_t[i]:=tab_t[b]*a;
+	tab_t[a]:=tab_t[c]*a;
+	tab_u[i]:=tab_u[b]*a;
+	tab_u[a]:=tab_u[c]*a;
+	tab_v[i]:=tab_v[b]*a;
+	tab_v[a]:=tab_v[c]*a;
+	tab_w[i]:=tab_w[b]*a;
+	tab_w[a]:=tab_w[c]*a;
+	tab_x[i]:=tab_x[b]*a;
+	tab_x[a]:=tab_x[c]*a;
+	tab_y[i]:=tab_y[b]*a;
+	tab_y[a]:=tab_y[c]*a;
+	tab_z[i]:=tab_z[b]*a;
+	tab_z[a]:=tab_z[c]*a;
+ENDFOR
+
+
+
+FOR i FROM -131 DOWNTO -140 DO
+	b:=i+1;
+	a:=0-i;
+	c:=a-1;
+
+	tab_n[i]:=tab_n[b]*a;
+	tab_n[a]:=tab_n[c]*a;
+	tab_o[i]:=tab_o[b]*a;
+	tab_o[a]:=tab_o[c]*a;
+	tab_p[i]:=tab_p[b]*a;
+	tab_p[a]:=tab_p[c]*a;
+	tab_q[i]:=tab_q[b]*a;
+	tab_q[a]:=tab_q[c]*a;
+	tab_r[i]:=tab_r[b]*a;
+	tab_r[a]:=tab_r[c]*a;
+	tab_s[i]:=tab_s[b]*a;
+	tab_s[a]:=tab_s[c]*a;
+	tab_t[i]:=tab_t[b]*a;
+	tab_t[a]:=tab_t[c]*a;
+	tab_u[i]:=tab_u[b]*a;
+	tab_u[a]:=tab_u[c]*a;
+	tab_v[i]:=tab_v[b]*a;
+	tab_v[a]:=tab_v[c]*a;
+	tab_w[i]:=tab_w[b]*a;
+	tab_w[a]:=tab_w[c]*a;
+	tab_x[i]:=tab_x[b]*a;
+	tab_x[a]:=tab_x[c]*a;
+	tab_y[i]:=tab_y[b]*a;
+	tab_y[a]:=tab_y[c]*a;
+	tab_z[i]:=tab_z[b]*a;
+	tab_z[a]:=tab_z[c]*a;
+ENDFOR
+
+
+FOR i FROM -141 DOWNTO -150 DO
+	b:=i+1;
+	a:=0-i;
+	c:=a-1;
+
+	tab_o[i]:=tab_o[b]*a;
+	tab_o[a]:=tab_o[c]*a;
+	tab_p[i]:=tab_p[b]*a;
+	tab_p[a]:=tab_p[c]*a;
+	tab_q[i]:=tab_q[b]*a;
+	tab_q[a]:=tab_q[c]*a;
+	tab_r[i]:=tab_r[b]*a;
+	tab_r[a]:=tab_r[c]*a;
+	tab_s[i]:=tab_s[b]*a;
+	tab_s[a]:=tab_s[c]*a;
+	tab_t[i]:=tab_t[b]*a;
+	tab_t[a]:=tab_t[c]*a;
+	tab_u[i]:=tab_u[b]*a;
+	tab_u[a]:=tab_u[c]*a;
+	tab_v[i]:=tab_v[b]*a;
+	tab_v[a]:=tab_v[c]*a;
+	tab_w[i]:=tab_w[b]*a;
+	tab_w[a]:=tab_w[c]*a;
+	tab_x[i]:=tab_x[b]*a;
+	tab_x[a]:=tab_x[c]*a;
+	tab_y[i]:=tab_y[b]*a;
+	tab_y[a]:=tab_y[c]*a;
+	tab_z[i]:=tab_z[b]*a;
+	tab_z[a]:=tab_z[c]*a;
+ENDFOR
+
+
+FOR i FROM -151 DOWNTO -160 DO
+	b:=i+1;
+	a:=0-i;
+	c:=a-1;
+
+	tab_p[i]:=tab_p[b]*a;
+	tab_p[a]:=tab_p[c]*a;
+	tab_q[i]:=tab_q[b]*a;
+	tab_q[a]:=tab_q[c]*a;
+	tab_r[i]:=tab_r[b]*a;
+	tab_r[a]:=tab_r[c]*a;
+	tab_s[i]:=tab_s[b]*a;
+	tab_s[a]:=tab_s[c]*a;
+	tab_t[i]:=tab_t[b]*a;
+	tab_t[a]:=tab_t[c]*a;
+	tab_u[i]:=tab_u[b]*a;
+	tab_u[a]:=tab_u[c]*a;
+	tab_v[i]:=tab_v[b]*a;
+	tab_v[a]:=tab_v[c]*a;
+	tab_w[i]:=tab_w[b]*a;
+	tab_w[a]:=tab_w[c]*a;
+	tab_x[i]:=tab_x[b]*a;
+	tab_x[a]:=tab_x[c]*a;
+	tab_y[i]:=tab_y[b]*a;
+	tab_y[a]:=tab_y[c]*a;
+	tab_z[i]:=tab_z[b]*a;
+	tab_z[a]:=tab_z[c]*a;
+ENDFOR
+
+
+FOR i FROM -161 DOWNTO -170 DO
+	b:=i+1;
+	a:=0-i;
+	c:=a-1;
+
+	tab_q[i]:=tab_q[b]*a;
+	tab_q[a]:=tab_q[c]*a;
+	tab_r[i]:=tab_r[b]*a;
+	tab_r[a]:=tab_r[c]*a;
+	tab_s[i]:=tab_s[b]*a;
+	tab_s[a]:=tab_s[c]*a;
+	tab_t[i]:=tab_t[b]*a;
+	tab_t[a]:=tab_t[c]*a;
+	tab_u[i]:=tab_u[b]*a;
+	tab_u[a]:=tab_u[c]*a;
+	tab_v[i]:=tab_v[b]*a;
+	tab_v[a]:=tab_v[c]*a;
+	tab_w[i]:=tab_w[b]*a;
+	tab_w[a]:=tab_w[c]*a;
+	tab_x[i]:=tab_x[b]*a;
+	tab_x[a]:=tab_x[c]*a;
+	tab_y[i]:=tab_y[b]*a;
+	tab_y[a]:=tab_y[c]*a;
+	tab_z[i]:=tab_z[b]*a;
+	tab_z[a]:=tab_z[c]*a;
+ENDFOR
+
+
+FOR i FROM -171 DOWNTO -180 DO
+	b:=i+1;
+	a:=0-i;
+	c:=a-1;
+
+	tab_r[i]:=tab_r[b]*a;
+	tab_r[a]:=tab_r[c]*a;
+	tab_s[i]:=tab_s[b]*a;
+	tab_s[a]:=tab_s[c]*a;
+	tab_t[i]:=tab_t[b]*a;
+	tab_t[a]:=tab_t[c]*a;
+	tab_u[i]:=tab_u[b]*a;
+	tab_u[a]:=tab_u[c]*a;
+	tab_v[i]:=tab_v[b]*a;
+	tab_v[a]:=tab_v[c]*a;
+	tab_w[i]:=tab_w[b]*a;
+	tab_w[a]:=tab_w[c]*a;
+	tab_x[i]:=tab_x[b]*a;
+	tab_x[a]:=tab_x[c]*a;
+	tab_y[i]:=tab_y[b]*a;
+	tab_y[a]:=tab_y[c]*a;
+	tab_z[i]:=tab_z[b]*a;
+	tab_z[a]:=tab_z[c]*a;
+ENDFOR
+
+
+FOR i FROM -181 DOWNTO -190 DO
+	b:=i+1;
+	a:=0-i;
+	c:=a-1;
+
+	tab_s[i]:=tab_s[b]*a;
+	tab_s[a]:=tab_s[c]*a;
+	tab_t[i]:=tab_t[b]*a;
+	tab_t[a]:=tab_t[c]*a;
+	tab_u[i]:=tab_u[b]*a;
+	tab_u[a]:=tab_u[c]*a;
+	tab_v[i]:=tab_v[b]*a;
+	tab_v[a]:=tab_v[c]*a;
+	tab_w[i]:=tab_w[b]*a;
+	tab_w[a]:=tab_w[c]*a;
+	tab_x[i]:=tab_x[b]*a;
+	tab_x[a]:=tab_x[c]*a;
+	tab_y[i]:=tab_y[b]*a;
+	tab_y[a]:=tab_y[c]*a;
+	tab_z[i]:=tab_z[b]*a;
+	tab_z[a]:=tab_z[c]*a;
+ENDFOR
+
+
+FOR i FROM -191 DOWNTO -200 DO
+	b:=i+1;
+	a:=0-i;
+	c:=a-1;
+
+	tab_t[i]:=tab_t[b]*a;
+	tab_t[a]:=tab_t[c]*a;
+	tab_u[i]:=tab_u[b]*a;
+	tab_u[a]:=tab_u[c]*a;
+	tab_v[i]:=tab_v[b]*a;
+	tab_v[a]:=tab_v[c]*a;
+	tab_w[i]:=tab_w[b]*a;
+	tab_w[a]:=tab_w[c]*a;
+	tab_x[i]:=tab_x[b]*a;
+	tab_x[a]:=tab_x[c]*a;
+	tab_y[i]:=tab_y[b]*a;
+	tab_y[a]:=tab_y[c]*a;
+	tab_z[i]:=tab_z[b]*a;
+	tab_z[a]:=tab_z[c]*a;
+ENDFOR
+
+
+FOR i FROM -201 DOWNTO -210 DO
+	b:=i+1;
+	a:=0-i;
+	c:=a-1;
+
+	tab_u[i]:=tab_u[b]*a;
+	tab_u[a]:=tab_u[c]*a;
+	tab_v[i]:=tab_v[b]*a;
+	tab_v[a]:=tab_v[c]*a;
+	tab_w[i]:=tab_w[b]*a;
+	tab_w[a]:=tab_w[c]*a;
+	tab_x[i]:=tab_x[b]*a;
+	tab_x[a]:=tab_x[c]*a;
+	tab_y[i]:=tab_y[b]*a;
+	tab_y[a]:=tab_y[c]*a;
+	tab_z[i]:=tab_z[b]*a;
+	tab_z[a]:=tab_z[c]*a;
+ENDFOR
+
+
+FOR i FROM -211 DOWNTO -220 DO
+	b:=i+1;
+	a:=0-i;
+	c:=a-1;
+
+	tab_v[i]:=tab_v[b]*a;
+	tab_v[a]:=tab_v[c]*a;
+	tab_w[i]:=tab_w[b]*a;
+	tab_w[a]:=tab_w[c]*a;
+	tab_x[i]:=tab_x[b]*a;
+	tab_x[a]:=tab_x[c]*a;
+	tab_y[i]:=tab_y[b]*a;
+	tab_y[a]:=tab_y[c]*a;
+	tab_z[i]:=tab_z[b]*a;
+	tab_z[a]:=tab_z[c]*a;
+ENDFOR
+
+
+FOR i FROM -221 DOWNTO -230 DO
+	b:=i+1;
+	a:=0-i;
+	c:=a-1;
+
+	tab_w[i]:=tab_w[b]*a;
+	tab_w[a]:=tab_w[c]*a;
+	tab_x[i]:=tab_x[b]*a;
+	tab_x[a]:=tab_x[c]*a;
+	tab_y[i]:=tab_y[b]*a;
+	tab_y[a]:=tab_y[c]*a;
+	tab_z[i]:=tab_z[b]*a;
+	tab_z[a]:=tab_z[c]*a;
+ENDFOR
+
+
+FOR i FROM -231 DOWNTO -240 DO
+	b:=i+1;
+	a:=0-i;
+	c:=a-1;
+
+	tab_x[i]:=tab_x[b]*a;
+	tab_x[a]:=tab_x[c]*a;
+	tab_y[i]:=tab_y[b]*a;
+	tab_y[a]:=tab_y[c]*a;
+	tab_z[i]:=tab_z[b]*a;
+	tab_z[a]:=tab_z[c]*a;
+ENDFOR
+
+
+FOR i FROM -241 DOWNTO -250 DO
+	b:=i+1;
+	a:=0-i;
+	c:=a-1;
+
+	tab_y[i]:=tab_y[b]*a;
+	tab_y[a]:=tab_y[c]*a;
+	tab_z[i]:=tab_z[b]*a;
+	tab_z[a]:=tab_z[c]*a;
+ENDFOR
+
+
+FOR i FROM -251 DOWNTO -260 DO
+	b:=i+1;
+	a:=0-i;
+	c:=a-1;
+
+	tab_z[i]:=tab_z[b]*a;
+	tab_z[a]:=tab_z[c]*a;
+ENDFOR
+
+indeksy_zero(tab_a,tab_b,tab_c,tab_d,tab_e,tab_f,tab_g,tab_h,tab_i,tab_j,tab_k,tab_l,tab_m,tab_n,tab_o,tab_p,tab_q,tab_r,tab_s,tab_t,tab_u,tab_v,tab_w,tab_x,tab_y,tab_z,a);
+WRITE a;
+
+END

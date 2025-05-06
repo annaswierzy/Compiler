@@ -1,0 +1,27 @@
+# Wynik: 200, 198,..., 102, 100, -12, -16, -20,..., -396, -400
+
+PROCEDURE wpisz(T tab, pocz, konc) IS a BEGIN
+FOR it FROM konc DOWNTO pocz DO
+a:=it*4;
+tab[it]:=a;
+ENDFOR END
+
+PROGRAM IS t_a[50:100], t_b[-200:-3],a,b BEGIN
+FOR i FROM 50 TO 100 DO
+a:=i*2;
+t_a[i]:=a;
+ENDFOR
+a:=-200;
+b:=-3;
+wpisz(t_b,a,b);
+FOR i FROM 100 DOWNTO 50 DO
+WRITE t_a[i];
+ENDFOR 
+FOR i FROM -30 DOWNTO -1000 DO
+a:=i%10;
+IF a=0 THEN
+b:=i/10;
+WRITE t_b[b];
+ENDIF
+ENDFOR
+END
