@@ -1,0 +1,151 @@
+Compiler Behavior
+
+The compiler translates programs written in a simple imperative language into code for a custom virtual machine. It is designed to detect and report a wide range of semantic and syntactic errors, and generate efficient, compact machine code when the input is valid.
+
+Error Handling
+
+The compiler provides informative error messages indicating both the type and location of the error. It performs static checks for:
+
+    Redeclaration of variables
+
+    Use of undeclared variables
+
+    Calls to undefined procedures
+
+    Incorrect array bounds (e.g., upper bound smaller than lower bound)
+
+    Invalid operations such as modifying loop iterators or calling undeclared/recurrent procedures
+
+Errors are reported with line-level precision, helping users quickly locate and resolve problems in their code.
+
+
+Code Generation
+
+If the input program passes all checks, the compiler emits code for a dedicated virtual machine. The generated code:
+
+    Performs multiplication and division in logarithmic time with respect to argument values (using optimized algorithms)
+
+    Respects the semantics of the source language, including:
+
+        Proper initialization of loop iterators
+
+        Parameter passing by reference in procedures (IN-OUT)
+
+        Restrictions on recursion and procedure calling order
+        
+The Grammar of the Language
+        
+1 program_all -> procedures main
+2
+3 procedures -> procedures PROCEDURE proc_head IS declarations BEGIN commands END
+4 | procedures PROCEDURE proc_head IS BEGIN commands END
+5 |
+6
+7 main -> PROGRAM IS declarations BEGIN commands END
+8 | PROGRAM IS BEGIN commands END
+9
+10 commands -> commands command
+11 | command
+12
+13 command -> identifier := expression ;
+14 | IF condition THEN commands ELSE commands ENDIF
+15 | IF condition THEN commands ENDIF
+16 | WHILE condition DO commands ENDWHILE
+17 | REPEAT commands UNTIL condition ;
+18 | FOR pidentifier FROM value TO value DO commands ENDFOR
+19 | FOR pidentifier FROM value DOWNTO value DO commands ENDFOR
+20 | proc_call ;
+21 | READ identifier ;
+22 | WRITE value ;
+23
+24 proc_head -> pidentifier ( args_decl )
+25
+26 proc_call -> pidentifier ( args )
+27
+28 declarations -> declarations , pidentifier
+29 | declarations , pidentifier [ num : num ]
+30 | pidentifier
+31 | pidentifier [ num : num ]
+32
+33 args_decl -> args_decl , pidentifier
+34 | args_decl , T pidentifier
+35 | pidentifier
+36 | T pidentifier
+37
+38 args -> args , pidentifier
+39 | pidentifier
+40
+41 expression -> value
+42 | value + value
+43 | value - value
+44 | value * value
+45 | value / value
+46 | value % value
+47
+48 condition -> value = value
+49 | value != value
+50 | value > value
+51 | value < value
+52 | value >= value
+53 | value <= value
+54
+55 value -> num
+56 | identifier
+57
+58 identifier -> pidentifier
+59 | pidentifier [ pidentifier ]
+60 | pidentifier [ num ]
+
+Virtual Machine Instructions
+
+Instruction	Description	Execution Time
+
+GET i	Reads a number from input and stores it in memory cell pi, then k ← k+1	100
+PUT i	Outputs the value from memory cell pi, then k ← k+1	100
+LOAD i	Loads the value from pi into the accumulator (p0 ← pi), then k ← k+1	10
+STORE i	Stores the accumulator into pi (pi ← p0), then k ← k+1	10
+LOADI i	Loads the value from the address stored in pi (p0 ← p[pi]), k ← k+1	20
+STOREI i	Stores the accumulator into address p[pi], then k ← k+1	20
+ADD i	Adds pi to the accumulator (p0 ← p0 + pi), then k ← k+1	10
+SUB i	Subtracts pi from the accumulator (p0 ← p0 − pi), then k ← k+1	10
+ADDI i	Adds value from address p[pi] to accumulator, then k ← k+1	20
+SUBI i	Subtracts value from address p[pi] from accumulator, then k ← k+1	20
+SET x	Sets the accumulator to x (p0 ← x), then k ← k+1	50
+HALF	Halves the accumulator (p0 ← floor(p0 / 2)), then k ← k+1	5
+JUMP j	Jumps to instruction at relative offset j (k ← k + j)	1
+JPOS j	If p0 > 0, jump by j; otherwise k ← k + 1	1
+JZERO j	If p0 == 0, jump by j; otherwise k ← k + 1	1
+JNEG j	If p0 < 0, jump by j; otherwise k ← k + 1	1
+RTRN i	Sets k to the value stored in pi (k ← pi)	10
+HALT	Stops the program	0
+
+Notes:
+
+    p0 is the accumulator.
+
+    k is the instruction counter.
+
+    All operations are performed on 64-bit signed integers.
+
+    Jumping to an undefined instruction is treated as a runtime error.
+
+The source language supports:
+
+    Integer arithmetic with safe handling of division by zero (result and remainder default to 0)
+
+    Arrays with user-defined index ranges (e.g., tab[-10:10])
+
+    Control flow structures: IF, WHILE, REPEAT-UNTIL, and FOR loops with non-modifiable iterators
+
+    Procedure definitions and calls with pass-by-reference parameters (prefixed with T)
+
+    READ and WRITE instructions for input/output
+
+    Comments beginning with # (ignored by the compiler)
+
+
+Virtual Machine Target
+
+The virtual machine executes a linear sequence of instructions, using an accumulator and memory cells. Execution proceeds until the HALT instruction is encountered. Instructions such as LOAD, STORE, ADD, JUMP, and others simulate low-level computation. All code generated by the compiler complies with the virtual machine’s specifications and adheres to resource constraints for time and memory.
+
+    
